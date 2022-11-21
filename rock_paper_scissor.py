@@ -40,8 +40,12 @@ def play_best_of(n):
             print('You and the computer have both chosen {}. It is a TIE!!! \n'.format(user))
         # if you WIN
         elif result == 1:
+            player_wins += 1
             print('You chose {} and the computer chose {}. You WON!!!.\n.'.format(user, computer))
-            
+        else:
+            computer_wins += 1
+            print('You chose {} and the computer chose {}. You LOST :[ !!!.\n'.format(user, computer))
+        print('/n')
 
 
 if __name__ == '__main__':
