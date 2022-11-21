@@ -37,8 +37,12 @@ def play_best_of(n):
         result, user, computer = play()
         # if TIE
         if result == 0:
-            print('You and the computer have both chosen {}. \n'.format(user))
+            print('You and the computer have both chosen {}. It is a TIE!!! \n'.format(user))
+        # if you WIN
+        elif result == 1:
+            print('You chose {} and the computer chose {}. You WON!!!.\n.'.format(user, computer))
             
+
 
 if __name__ == '__main__':
     print(play())
