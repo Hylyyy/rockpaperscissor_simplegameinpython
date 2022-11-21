@@ -1,2 +1,5 @@
-print("******  PROGRAMMED BY  ******")
-print("***** HYDEE LYN C. PALISOC *****\n")
+print("************  PROGRAMMED BY  ************")
+print("********* HYDEE LYN C. PALISOC *********\n")
+
+def play():
+    user = input()
