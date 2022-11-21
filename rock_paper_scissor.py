@@ -36,22 +36,20 @@ def play_best_of(n):
         result, user, computer = play()
         # if TIE
         if result == 0:
-            print('You and the computer have both chosen {}. It is a TIE!!! \n'.format(user))
+            print('You and the computer have both chosen {}. It is a TIE!!!. \n'.format(user))
         # if you WIN
         elif result == 1:
             player_wins += 1
-            print('You chose {} and the computer chose {}. You WON!!!.\n.'.format(user, computer))
+            print('You chose {} and the computer chose {}. You WON!!!.\n'.format(user, computer))
         else:
             computer_wins += 1
             print('You chose {} and the computer chose {}. You LOST :[ !!!.\n'.format(user, computer))
-        print('/n')
-
+    
     if player_wins > computer_wins:
-        print('===HOORAY!. YOU HAVE WON THE BEST OF {} GAMES!!!.'.format(n))
+        print('===HOORAY!. YOU HAVE WON THE BEST OF {} GAMES!!!.==='.format(n))
     else:
-        print('AWWW :[ THE COMPUTER HAS WON THE BEST OF {} GAMES!!!. BETTER LUCK NEXT TIME!!!.'.format(n))
+        print('===AWWW :[ THE COMPUTER HAS WON THE BEST OF {} GAMES!!!. BETTER LUCK NEXT TIME!!!.==='.format(n))
 
 
 if __name__ == '__main__':
-    print(play())
     play_best_of(3) # 2
