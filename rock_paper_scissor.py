@@ -15,6 +15,11 @@ def play():
     if is_win(user, computer):
         return "You have chosen {} and the computer has chosen {}. You WON!!!.".format(user, computer)
 
-
+def is_win(player, opponent):
+    # if the player beats the opponent, return true.
+    # the winning conditions are: r > s, s > p, p > r
+    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+        return True
+    return False
 
   
