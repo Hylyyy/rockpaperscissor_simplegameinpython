@@ -32,7 +32,6 @@ def play_best_of(n):
     player_wins = 0
     computer_wins = 0
     wins_necessary = math.ceil(n/2)
-    print(wins_necessary)
     while player_wins < wins_necessary and computer_wins < wins_necessary:
         result, user, computer = play()
         # if TIE
