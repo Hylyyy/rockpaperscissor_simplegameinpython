@@ -5,7 +5,7 @@ import random
 import math
 
 def play():
-    user = input("What do you want to choose between 'r' for rock, 'p' for paper, and 's' for scissors?: ")
+    user = input("What do you want to choose between: 'r' for rock, 'p' for paper, and 's' for scissors?: ")
     user = user.lower()
 
     computer = random.choice(['r', 'p', 's'])
@@ -46,9 +46,9 @@ def play_best_of(n):
             print('You chose {} and the computer chose {}. You LOST :[ !!!.\n'.format(user, computer))
     
     if player_wins > computer_wins:
-        print('===HOORAY!. YOU HAVE WON THE BEST OF {} GAMES!!!.==='.format(n))
+        print('\t============== HOORAY! ==============\n ======= YOU HAVE WON THE BEST OF {} GAMES!!!. ======='.format(n))
     else:
-        print('===AWWW :[ THE COMPUTER HAS WON THE BEST OF {} GAMES!!!. BETTER LUCK NEXT TIME!!!.==='.format(n))
+        print('\t\t\t=============== AWWW :[ ===============\n ======= THE COMPUTER HAS WON THE BEST OF {} GAMES!!!. BETTER LUCK NEXT TIME!!!. ======='.format(n))
 
 
 if __name__ == '__main__':
