@@ -11,13 +11,13 @@ def play():
     computer = random.choice(['r', 'p', 's'])
 
     if user == computer:
-        return "You and the computer have both chosen {}. It's a TIE!!!.".format(computer)
+        return (0, user, computer)
 
     # r > s, s > p, p > r
     if is_win(user, computer):
-        return "You have chosen {} and the computer has chosen {}. You WON!!!.".format(user, computer)
+        return (1, user, computer)
 
-    return "You have chosen {} and the computer has chosen {}. You LOST :{ !!!.".format(user, computer)
+    return (-1, user, computer)
 
 def is_win(player, opponent):
     # if the player beats the opponent, return true.
@@ -33,6 +33,13 @@ def play_best_of(n):
     computer_wins = 0
     wins_necessary = math.ceil(n/2)
     print(wins_necessary)
+    while player_wins < wins_necessary and computer_wins < wins_necessary:
+        result, user, computer = play()
+        # if TIE
+        if result == 0:
+            print('You and the computer have both chosen {}. \n'.format(user))
+            
 
 if __name__ == '__main__':
     print(play())
+    play_best_of(3) # 2
